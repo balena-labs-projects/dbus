@@ -61,6 +61,7 @@ CMD [ "/bin/bash", "/usr/src/mystartscript.sh" ]
 
 ### Environment variables
 
-| Environment variable | Description                               | Default | Options |
-| -------------------- | ----------------------------------------- | ------- | ------- |
-| `DBUS_PORT`          | The port on which the bus listens         | 55884   | -       |
+| Environment variable | Description                                                         | Default      | Options |
+| -------------------- | ------------------------------------------------------------------- | -------      | ------- |
+| `DBUS_PORT`          | The port on which the bus listens                                   | 55884        | -       |
+| `DBUS_CONFIG`        | The config file to use for the bus, relative to /usr/src/app        | session.conf | -       |
