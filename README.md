@@ -4,7 +4,7 @@ A block that provides dbus allowing communication among services. Unlike the hos
 
 ## How to use
 
-Add the dbus block as a service in your docker-compose file
+Add the dbus block as a service in your docker-compose file to start a single bus. The default is to start a bus with the "session" bus config on TCP port 55884.
 
 ```yml
 version: "2"
@@ -12,21 +12,32 @@ services:
   dbus:
     image: balenablocks/dbus
     restart: always
-    privileged: true
 ```
 
-The block exposes the following buses over tcp
+You can also start a bus with the "system" config by overriding the `DBUS_CONFIG` environment variable.
 
-- Session bus
-- System bus
+```yml
+version: "2"
+services:
+  dbus-session:
+    image: balenablocks/dbus
+    restart: always
+    environment:
+      - DBUS_CONFIG: session.conf
+  dbus-system:
+    image: balenablocks/dbus
+    restart: always
+    environment:
+      - DBUS_CONFIG: system.conf
+```
 
-You need to configure the services where you need dbus to use the blocks address
+Configure your services requiring access to dbus to use the TCP addresses of the containers providing the busses
 
 Example:
 
 ```bash
-export DBUS_SESSION_BUS_ADDRESS=tcp:host=dbus,port=55884
-export DBUS_SYSTEM_BUS_ADDRESS=tcp:host=dbus,port=55887
+export DBUS_SESSION_BUS_ADDRESS=tcp:host=dbus-session,port=55884
+export DBUS_SYSTEM_BUS_ADDRESS=tcp:host=dbus-system,port=55884
 ```
 
 ## Customization
@@ -52,5 +63,4 @@ CMD [ "/bin/bash", "/usr/src/mystartscript.sh" ]
 
 | Environment variable | Description                               | Default | Options |
 | -------------------- | ----------------------------------------- | ------- | ------- |
-| `DBUS_SESSION_PORT`  | The port on which the session bus listens | 55884   | -       |
-| `DBUS_SESSION_PORT`  | The port on which the system bus listens  | 55887   | -       |
+| `DBUS_PORT`          | The port on which the bus listens         | 55884   | -       |
