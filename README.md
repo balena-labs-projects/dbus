@@ -40,6 +40,27 @@ export DBUS_SESSION_BUS_ADDRESS=tcp:host=dbus-session,port=55884
 export DBUS_SYSTEM_BUS_ADDRESS=tcp:host=dbus-system,port=55884
 ```
 
+Alternatively, the server can listen on UNIX domain sockets. Your container can connect to this bus by sharing the socket through a named volume and specifying the appropriate environment variable:
+
+```yml
+version: "2"
+volumes:
+  dbus:
+services:
+  dbus-session:
+    image: balenablocks/dbus
+    environment:
+      DBUS_ADDRESS: unix:path=/run/dbus/session.sock
+    volumes:
+      - dbus:/run/dbus
+  my-app:
+    build: ./app
+    volumes:
+      - dbus:/run/dbus
+    environment:
+      DBUS_SESSION_BUS_ADDRESS: unix:path=/run/dbus/session.sock
+
+
 ## Customization
 
 ### Extend image configuration
@@ -63,5 +84,6 @@ CMD [ "/bin/bash", "/usr/src/mystartscript.sh" ]
 
 | Environment variable | Description                                                         | Default      | Options |
 | -------------------- | ------------------------------------------------------------------- | -------      | ------- |
-| `DBUS_PORT`          | The port on which the bus listens                                   | 55884        | -       |
+| `DBUS_PORT`          | The port on which the bus listens, only for TCP sockets             | 55884        | -       |
 | `DBUS_CONFIG`        | The config file to use for the bus, relative to /usr/src/app        | session.conf | -       |
+| `DBUS_ADDRESS`       | The address to listen on, allows using UNIX domain sockets          | -            | -
