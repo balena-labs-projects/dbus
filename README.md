@@ -23,12 +23,12 @@ services:
     image: balenablocks/dbus
     restart: always
     environment:
-      - DBUS_CONFIG: session.conf
+      DBUS_CONFIG: session.conf
   dbus-system:
     image: balenablocks/dbus
     restart: always
     environment:
-      - DBUS_CONFIG: system.conf
+      DBUS_CONFIG: system.conf
 ```
 
 Configure your services requiring access to dbus to use the TCP addresses of the containers providing the busses
