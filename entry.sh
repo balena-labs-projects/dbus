@@ -10,3 +10,4 @@ dbus-daemon --config-file=/usr/src/app/$CONFIG \
 	    --nofork \
 	    --address=$ADDRESS \
 	    --print-address
+
