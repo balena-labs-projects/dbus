@@ -59,6 +59,7 @@ services:
       - dbus:/run/dbus
     environment:
       DBUS_SESSION_BUS_ADDRESS: unix:path=/run/dbus/session.sock
+```
 
 
 ## Customization
