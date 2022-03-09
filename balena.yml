@@ -1,7 +1,8 @@
 name: dbus
 type: sw.block
 description: >-
-  D-Bus is a message bus system, a simple way for applications to talk to one another.
+  D-Bus is a message bus system, a simple way for applications to talk to one
+  another.
 assets:
   repository:
     type: blob.asset
@@ -13,7 +14,7 @@ assets:
       url: >-
         https://raw.githubusercontent.com/balenablocks/dbus/master/logo.png
 data:
-  applicationEnvironmentVariables:
+  applicationEnvironmentVariables: null
   supportedDeviceTypes:
     - genericx86-64-ext
     - intel-nuc
