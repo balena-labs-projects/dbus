@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "balenaBlocks dbus version: $(cat VERSION)"
+echo "balenaLabs dbus version: $(cat VERSION)"
 
 PORT=${DBUS_PORT:-55884}
 ADDRESS=${DBUS_ADDRESS:-tcp:host=0.0.0.0,bind=0.0.0.0,port=$PORT}
