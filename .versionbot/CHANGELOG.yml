@@ -1,0 +1,155 @@
+- commits:
+    - subject: moving from balenablocks to balena-labs-projects
+      hash: 8e1bc2fe1f9d73e853933ff29369d072f2264b7f
+      body: ""
+      footer:
+        Signed-off-by: Flynn Joffray <flynn@balena.io>
+        signed-off-by: Flynn Joffray <flynn@balena.io>
+        Change-type: patch
+        change-type: patch
+      author: Flynn Joffray
+      nested: []
+  version: 1.0.1
+  title: ""
+  date: 2022-11-16T04:56:08.636Z
+- version: 1.0.0
+  date: 2022-03-09T21:35:54Z
+  commits:
+    - hash: 809dbf870a1bb7b5d008a8bfedb340f8422e4fc3
+      author: Joseph Kogut
+      footers:
+        signed-off-by: Joseph Kogut <joseph@balena.io>
+      subject: create logo
+      body: null
+    - hash: c2d525a1b4e5e988fe10f9ce4818de1a72bb3198
+      author: Joseph Kogut
+      footers:
+        change-type: major
+        signed-off-by: Joseph Kogut <joseph@balena.io>
+      subject: create balena.yml for block submission
+      body: null
+- version: 0.0.3
+- date: 2021-07-21T19:32:59Z
+- commits:
+    - hash: ae0ae47a803895f3634f8f74241a472fd16cd4a6
+- commits:
+    - author: Joseph Kogut
+- commits:
+    - footers:
+        change-type: patch
+- commits:
+    - footers:
+        signed-off-by: Joseph Kogut <joseph@balena.io>
+- commits:
+    - subject: fix closing code block before customization
+- commits:
+    - body: null
+- version: 0.0.2
+- date: 2021-07-08T10:54:46Z
+- commits:
+    - hash: ff9c638bb75e109ae7dbf4733cdca3bb70c4860f
+- commits:
+    - author: Rahul Thakoor
+- commits:
+    - footers:
+        change-type: patch
+- commits:
+    - footers:
+        signed-off-by: Rahul Thakoor <rahul@balena.io>
+- commits:
+    - subject: Fix version
+- commits:
+    - body: null
+- commits:
+    - hash: 903028158a87e768cd5ed4d9733308f05e7b8a32
+- commits:
+    - author: Rahul Thakoor
+- commits:
+    - footers:
+        change-type: patch
+- commits:
+    - footers:
+        signed-off-by: Rahul Thakoor <rahul@balena.io>
+- commits:
+    - subject: Add repo.yml
+- commits:
+    - body: null
+- commits:
+    - hash: a55ea3ea6803a01b4c5f3a3e8f244df26b4bb4f1
+- commits:
+    - author: Joseph Kogut
+- commits:
+    - footers:
+        change-type: patch
+- commits:
+    - footers:
+        signed-off-by: Joseph Kogut <joseph@balena.io>
+- commits:
+    - subject: "readme: fix environment declaration in examples"
+- commits:
+    - body: null
+- commits:
+    - hash: 41485d332bddfff51fb1dcd45a048d8bb61471f0
+- commits:
+    - author: Joseph Kogut
+- commits:
+    - footers:
+        change-type: patch
+- commits:
+    - footers:
+        signed-off-by: Joseph Kogut <joseph@balena.io>
+- commits:
+    - subject: "entry: add ADDRESS variable to override listen address"
+- commits:
+    - body: null
+- commits:
+    - hash: da75c0a8ac6dd32975796164a2fdc8b2122ff1e8
+- commits:
+    - author: Joseph Kogut
+- commits:
+    - footers:
+        change-type: patch
+- commits:
+    - footers:
+        signed-off-by: Joseph Kogut <joseph@balena.io>
+- commits:
+    - subject: "entry: force bus to not fork"
+- commits:
+    - body: null
+- commits:
+    - hash: 4473d3029361655d55a4903683e41cd1bbe5d9ef
+- commits:
+    - author: Rahul Thakoor
+- commits:
+    - subject: Merge branch 'master' into nofork
+- commits:
+    - body: null
+- commits:
+    - hash: 4a762eeff2976a8a9363807c3efe363cdd56c744
+- commits:
+    - author: Joseph Kogut
+- commits:
+    - footers:
+        change-type: patch
+- commits:
+    - footers:
+        signed-off-by: Joseph Kogut <joseph@balena.io>
+- commits:
+    - subject: "readme: add variable description for DBUS_CONFIG"
+- commits:
+    - body: null
+- commits:
+    - hash: 508c76e0f3df09b398d49d8e9777218cc2854a25
+- commits:
+    - author: Joseph Kogut
+- commits:
+    - footers:
+        signed-off-by: Joseph Kogut <joseph@balena.io>
+- commits:
+    - subject: launch a single bus instance per container
+- commits:
+    - body: |-
+        Launch only a single bus instance per container. Add variables to allow
+        for overriding the bus config file, as well as port, so that multiple
+        bus instances can be launched by adding multiple containers based on the
+        dbus block.

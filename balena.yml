@@ -1,8 +1,8 @@
 name: dbus
 type: sw.block
 description: >-
-  D-Bus is a message bus system, a simple way for applications to talk to one
-  another.
+  D-Bus is a message bus system, a simple way for applications to
+  talk to one another.
 assets:
   repository:
     type: blob.asset
@@ -23,4 +23,4 @@ data:
     - raspberrypi3
     - raspberrypi4-64
     - fincm3
-version: 1.0.0
+version: 1.0.1
