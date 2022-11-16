@@ -10,7 +10,7 @@ Add the dbus block as a service in your docker-compose file to start a single bu
 version: "2"
 services:
   dbus:
-    image: balenablocks/dbus
+    image: bh.cr/balenalabs/dbus
     restart: always
 ```
 
@@ -20,12 +20,12 @@ You can also start a bus with the "system" config by overriding the `DBUS_CONFIG
 version: "2"
 services:
   dbus-session:
-    image: balenablocks/dbus
+    image: bh.cr/balenalabs/dbus
     restart: always
     environment:
       DBUS_CONFIG: session.conf
   dbus-system:
-    image: balenablocks/dbus
+    image: bh.cr/balenalabs/dbus
     restart: always
     environment:
       DBUS_CONFIG: system.conf
@@ -48,7 +48,7 @@ volumes:
   dbus:
 services:
   dbus-session:
-    image: balenablocks/dbus
+    image: bh.cr/balenalabs/dbus
     environment:
       DBUS_ADDRESS: unix:path=/run/dbus/session.sock
     volumes:
@@ -71,7 +71,7 @@ You can extend the `dbus` block to include custom configuration as you would wit
 Example:
 
 ```dockerfile
-FROM balenablocks/dbus
+FROM bh.cr/balenalabs/dbus
 
 COPY example.conf /etc/dbus-1/system.d/
 

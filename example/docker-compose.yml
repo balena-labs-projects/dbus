@@ -1,7 +1,7 @@
 version: "2"
 services:
   dbus:
-    image: balenablocks/dbus
+    image: bh.cr/balenalabs/dbus
     restart: always
     privileged: true
   client:
